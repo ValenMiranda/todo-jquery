@@ -1,0 +1,93 @@
+html,body{
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: lightgrey;
+}
+
+header{
+	background-color: teal;
+	color: white;
+}
+
+input {
+	font-size: 14pt;
+	color: white;
+	text-align: justify;
+	line-height: normal;
+	font-smoothing: antialiased;
+}
+
+#list {
+	position: relative;
+}
+#list .new {
+	position: relative;
+	top: 0;
+	left: 0;
+	right: 0;
+	clear: both;
+	height: 100px;
+	background: #222222;
+}
+#list .new #new {
+	float: left;
+	width: calc(100% - 100px);
+	height: 100px;
+	padding: 0;
+	margin: 0;
+	outline: 0;
+	border: 0;
+	background: transparent;
+	line-height: 50px;
+	text-indent: 25px;
+}
+#list .new #new::-webkit-input-placeholder {
+	color: rgba(255, 255, 255, 0.5);
+}
+#list .new button {
+	cursor: pointer;
+	float: right;
+	width: 100px;
+	height: 100px;
+	padding: 0;
+	margin: 0;
+	outline: 0;
+	border: 0;
+	background: teal;
+	font-size: 50pt;
+	color: white;
+}
+#list .list {
+	position: relative;
+	box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+}
+#list .list .item {
+	clear: both;
+	height: 50px;
+}
+#list .list .item input {
+	cursor: default;
+	float: left;
+	width: calc(100% - 150px);
+	height: 50px;
+	padding: 0;
+	margin: 0;
+	outline: 0;
+	border: 0;
+	background: transparent;
+	text-indent: 25px;
+}
+
+#list .list .item ol {
+	float: right;
+}
+#list .list .item ol li {
+	cursor: pointer;
+	float: left;
+	width: 50px;
+	height: 50px;
+	font-size: 20pt;
+	line-height: 50px;
+	text-align: center;
+}
