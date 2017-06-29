@@ -23,11 +23,11 @@ $(document).ready(function(){
     });
     return false;
 
-    $('#list .list .item ol li').on('click',function(){
-      if($(this).hasClass('delete')){
-        $(this).parent('ol').parent('.item').remove();
-      }
-    })
+    function borrar(){
+      $('.delete').click(function(){
+        $(this).parent().remove();
+      })
+    }
 
  });
 });
