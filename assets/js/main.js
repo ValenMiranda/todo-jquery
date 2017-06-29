@@ -1,5 +1,5 @@
-$(function(){
-    $('.new').submit(function () {
+$(document).ready(function(){
+  $('.new').submit(function () {
 
     // Agregar tarea
     if ( $('#new').val() !== '' ) {
@@ -8,17 +8,26 @@ $(function(){
       edit = '<ol><li class="check fa fa-check"></li><li class="delete fa fa-times"></li></ol>';
       $('.list').append('<li class="item">' + input + edit + '</li>');
     };
+
     // limpiar input
     $('#new').val('');
 
     // Check y borrar
     $('#list .list .item ol li').on('click',function(){
       if ( $(this).hasClass('check') ) {
-        $(this).parent('ol').parent('.item').find('input').toggleClass('checked');
+        newEdit = '<ol><li class="delete fa fa-times"></li></ol>';
+        $(this).parent('ol').parent('.item').find('input').toggleClass($('.list').append('<div><li class="item">' + input + newEdit + '</li></div>'));
       } else if ( $(this).hasClass('delete') ) {
         $(this).parent('ol').parent('.item').remove();
       }
     });
     return false;
-  });
+
+    $('#list .list .item ol li').on('click',function(){
+      if($(this).hasClass('delete')){
+        $(this).parent('ol').parent('.item').remove();
+      }
+    })
+
+ });
 });
